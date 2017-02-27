@@ -13,5 +13,4 @@ Sample application for the version control systems and continuous integration la
 3. Item 3
  * Item 3a
  * Item 3b
-
 <p>EZ AZ A!</p>
