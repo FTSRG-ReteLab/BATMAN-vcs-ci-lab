@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import hu.bme.mit.train.controller.Tachograph;
 import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
@@ -12,6 +13,7 @@ public class TrainSystem {
 	private TrainController controller = new TrainControllerImpl();
 	private TrainSensor sensor = new TrainSensorImpl(controller);
 	private TrainUser user = new TrainUserImpl(controller);
+	public Tachograph t = new Tachograph();
 
 	public TrainController getController() {
 		return controller;
@@ -23,6 +25,10 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+	
+	public void pushData(int A, int B){
+		t.addData(A, B);
 	}
 
 }
