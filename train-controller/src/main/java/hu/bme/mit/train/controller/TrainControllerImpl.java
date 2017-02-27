@@ -43,7 +43,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 	@Override
 	public void emergencyStop(){
-		setSpeedLimit(0);
+		referenceSpeed = 0;
 	}
 
 }
